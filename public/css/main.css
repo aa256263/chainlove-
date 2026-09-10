@@ -1,0 +1,186 @@
+.backgroundRectangle {
+  width: 300px;
+  height: 140px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #D9D9D9;
+  border-radius: 10px;
+}
+
+.projectPreviewImage {
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #949494; /* As a fallback if the image fails to load */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the div area without distortion */
+}
+
+.projectPreviewName {
+  width: 110px;
+  height: 19px;
+  position: absolute;
+  left: 13px;
+  top: 65px;
+  color: #1A936F;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.tagContainer {
+  width: 40px;
+  height: 15px;
+  position: relative;
+  left: 220px;
+  top: 65px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #1A936F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagText {
+  color: #1A936F;
+  font-size: 7px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+.bookmarkButton {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 278px;
+  top: 65px;
+  background: url('../images/bookmark.png') no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.bookmarkButton.active {
+  background-image: url('../images/bookmarkfill.png');
+}
+
+.participantCount {
+  position: absolute;
+  left: 10px;
+  top: 123px;
+  display: flex;
+  align-items: center; /* 對齊圖標和文字 */
+}
+
+.participantIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.participantNumber {
+  margin-left: 4px; /* 為文字和圖標提供一點空間 */
+  color: black;
+  font-size: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.deadline {
+  position: absolute;
+  width: 79px;
+  height: 10px;
+  left: 216px;
+  top: 120px;
+  text-align: center;
+}
+
+.deadline .text, .deadline .date {
+  color: black;
+  font-size: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.deadline .date {
+  color: #1A936F; /* Highlight the date */
+}
+
+.projectSummary { /* 募款專案簡介 */
+  position: absolute;
+  left: 13px;
+  top: 81px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+
+.progressBar {
+  /* Set the position of the progress bar */
+  
+
+
+  /* Dimensions and appearance */
+  height: 4px; /* Adjust height as needed */
+  border-radius: 10em;
+  border: none; /* Remove default border if any */
+}
+
+.progressBar {
+  position: absolute;
+  left: 10px;
+  top: 119px;
+  width: 90%; /* 調整成全寬或根据需求设定 */
+  height: 4px; /* 进度条高度 */
+  background-color: #D9D9D9; /* 灰色背景 */
+  color: #1A936F; /* 这将设置进度条的颜色 */
+}
+
+.progressBar::-webkit-progress-bar {
+  background-color: #D9D9D9;
+}
+
+.progressBar::-webkit-progress-value {
+  background-color: #1A936F;
+}
+
+.progressBar::-moz-progress-bar {
+  background-color: #1A936F;
+}
+
+.goalAmount {
+  width: 100px; 
+  height: 10px; 
+  left: 95px; 
+  top: 120px; 
+  position: absolute; 
+  text-align: center;
+}
+
+.goalAmount .label, .goalAmount .currentAmount, .goalAmount .maxAmount, .goalAmount .percentage {
+  font-size: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.goalAmount .currentAmount, .goalAmount .percentage {
+  color: #1A936F;
+}
+
+.goalAmount .separator {
+  color: black;
+  font-size: 8px;
+}

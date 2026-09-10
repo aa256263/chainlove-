@@ -1,0 +1,59 @@
+.full-screen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    z-index: 9999; /* 確保在最上層 */
+}
+
+.loading-backdrop, .loading-container, .success-container, .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-circle, .error-circle {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.checkmark, .error-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.loading-text, .success-text, .error-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.success-subtext, .error-subtext {
+    font-size: 14px;
+    color: #555;
+}

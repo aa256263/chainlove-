@@ -1,0 +1,123 @@
+
+/* 新增彈窗樣式 */
+.modal {
+    display: none; /* 默認隱藏 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.category-title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 20px;
+    width: 100%; 
+    height: 30px;
+    text-align: left;
+    margin-bottom: 10px;  
+  }
+  
+  .search_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+  
+  .category-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;  
+    margin-bottom: 20px;      
+    width: 100%;
+  }
+  
+  .category-btn {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A936F;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    user-select: none;
+    box-sizing: border-box;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .category-btn span {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 2.5px solid #1A936F;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+  }
+  
+  .category-btn input[type="radio"] {
+    display: none;
+  }
+  
+  .category-btn input[type="radio"]:checked + span {
+    background-color: #1A936F;
+    color: white;
+    border: 2.5px solid #1A936F; 
+  }
+  
+  .category-btn:hover span {
+    background-color: #1A936F;
+    color: white;
+  }
+  
+  .submit-btn {
+    background-color: #1A936F;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+    width: 100%;          
+    max-width: 360px;    
+    height: 50px;        
+    text-align: center;
+  }
+  
+  .submit-btn:hover {
+    background-color: #148663; 
+  }

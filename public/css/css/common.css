@@ -1,0 +1,164 @@
+@font-face {
+	font-family:'myFont' ;
+	src: url('.../../font/SourceHanSansSC.otf');
+	font-weight: bolder;
+	font-style: normal;
+}
+*{
+	font-family: myFont;
+}
+html,body{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	max-width: 768px;
+	height: auto;
+	margin: 0 auto;
+	padding: 1px 0px;
+}
+.logoLine{
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 15px;
+	border: 1px solid #e2e2e2;
+}
+.logoLine>a{
+	display: block;
+	margin: auto 0px;
+}
+.logoLine>a:first-child{
+	float: left;
+}
+.logoLine>a:last-child{
+	float: right;
+}
+.view{
+	margin: 20px;
+	width: auto;
+}
+.footer{
+	padding-bottom: 80px;
+}
+.menu{
+	position: fixed;
+	bottom: 0px;
+	height: 80px;
+	width: 100%;
+	background-color: #fff;
+	max-width: 768px;
+}
+.menuLine{
+	width: 90%;
+	height: 60px;
+	background-color: #e2e2e2;
+	margin: 10px 3%;
+	padding: 0px 2%;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.menuItem{
+	width: 35px;
+	height: 35px;
+	background-color: aqua;
+	margin: auto 0;
+	background-size: 100% auto !important;
+	background-position: center;
+}
+.menuItem[index='0']{background: url(../images/home.png) 0px 0px no-repeat;}
+.menuItem[index='1']{background: url(../images/book.png) 0px 0px no-repeat;}
+.menuItem[index='2']{background: url(../images/collect.png) 0px 0px no-repeat;}
+.menuItem[index='3']{background: url(../images/mine.png) 0px 0px no-repeat;}
+
+.listTitle{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.listTitle>h1{
+	font-size: 20px;
+	margin: 5px 0px;
+}
+.resultInfo>.listTitle>button{
+	font-size: 12px;
+	width: 45px;
+}
+.listTitle>button{
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	border: 2px solid #329c7c;
+	border-radius: 4px;
+	color: #329c7c;
+	font-weight: bold;
+	background-color: #d9d9d9;
+	margin: auto 0px;
+	font-size: 14px;
+}
+.resultList{
+	margin: 20px 0px;
+}
+.resultCard{
+	display: flex;
+	flex-direction: row;
+	background-color: #d9d9d9;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	height: 150px;
+	cursor: pointer;
+}
+.resultCard>img{
+	width: 30%;
+	height: auto;
+	max-height: 150px;
+	object-fit: cover;
+}
+.resultInfo{
+	width: calc(70% - 20px);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.resultPer{
+	font-size: 12px;
+	font-weight: bold;
+}
+.resultProgress{
+	margin: 5px 0px;
+	width: 100%;
+	background-color: #7ab6a4;
+	height: 4px;
+	border-radius: 2px;
+	position: relative;
+}
+.resultProgressLine{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #1a936f;
+}
+.resultBottom{
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+	justify-content: space-between;
+	line-height: 16px;
+}
+.resultPeople{
+	padding-left: 17px;
+	background: url(../images/players.png) 0px 0px no-repeat;
+	background-size: 16px auto;
+}
+.resultTime>span, .resultPer>span, .resultPeople>span{
+	font-weight: bold;
+	color: #1a936f;
+}

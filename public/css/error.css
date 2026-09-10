@@ -1,0 +1,282 @@
+
+@font-face {
+	font-family: "myFont";
+	src: url('../font/SourceHanSansSC.otf');
+	font-weight: bolder;
+	font-style: normal;
+}
+
+.error-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    font-family: "myFont", sans-serif;
+}
+
+.error-component__fullscreen {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    overflow: hidden;
+}
+
+.error-component__container {
+    text-align: center;
+    position: relative;
+}
+
+.error-component__circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+
+.error-component__icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.error-component__icon::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 50px;
+    background-color: white;
+    top: 0;
+    left: 32px;
+    border-radius: 8px;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: error-component-exclamationMark 0.3s ease-out forwards;
+}
+
+.error-component__icon::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    bottom: 0;
+    left: 32px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: error-component-exclamationDot 0.3s ease-out 0.3s forwards;
+}
+
+.error-component__text {
+    color: #e74c3c;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: error-component-fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+.error-component__subtext {
+    color: #666;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: error-component-fadeInUp 0.5s ease-out 0.7s forwards;
+}
+
+.error-component__circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    animation: error-component-pulse 2s infinite;
+}
+
+@keyframes error-component-fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes error-component-exclamationMark {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes error-component-exclamationDot {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes error-component-pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+
+/* body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    font-family: 'myFont', sans-serif;
+    overflow: hidden;
+}
+.error-container {
+    text-align: center;
+    position: relative;
+}
+.error-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+}
+.error-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.error-icon::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 50px;
+    background-color: white;
+    top: 0;
+    left: 32px;
+    border-radius: 8px;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: exclamationMark 0.3s ease-out forwards;
+}
+.error-icon::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    bottom: 0;
+    left: 32px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: exclamationDot 0.3s ease-out 0.3s forwards;
+}
+.error-text {
+    color: #e74c3c;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+.error-subtext {
+    color: #666;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out 0.7s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes exclamationMark {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes exclamationDot {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.error-circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+} */

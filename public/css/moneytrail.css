@@ -1,0 +1,268 @@
+body {
+    font-family: "Microsoft JhengHei", "PingFang TC", "Helvetica Neue", Helvetica, Arial, sans-serif; /* 確保使用支持繁體字的字體 */
+}
+
+/* 你的其他CSS樣式 */
+#main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+#main .nav {
+    display: flex;
+    align-items: center;
+}
+#main .nav img {
+    height: 40px;
+}
+#main .nav .title {
+    color: #138d64;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+}
+#main .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+#main .box .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+#main .box .content .one {
+    width: 100%;
+    border: 4px #138d64 solid;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e3e3e3;
+    color: #138d64;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+#main .box .content .one .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 10px 0;
+}
+#main .box .content .one .item img {
+    margin-bottom: 10px;
+}
+#main .box .content .one .item .id {
+    font-size: 20px; /* 調整ID的字體大小 */
+    font-weight: bolder; /* 加粗 */
+    margin-bottom: 5px; /* 添加底部間距 */
+}
+#main .box .content .one .item .number {
+    font-size: 20px; /* 調整數字的字體大小 */
+    font-weight: bolder; /* 使數字加粗 */
+}
+#main .box .content .two {
+    border: 4px #138d64 solid;
+    border-radius: 8px;
+    padding: 15px 50px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3e3e3;
+}
+#main .box .content .two div:nth-child(2) {
+    margin-top: 30px;
+}
+#main .box .content .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    border: 4px #138d64 solid;
+    border-radius: 8px;
+    background-color: #e3e3e3;
+    padding: 15px;
+}
+#main .box .content .three img {
+    height: 150px;
+    width: 220px;
+    background-color: #949494;
+}
+#main .box .content .three div:nth-child(2) {
+    margin-top: 30px;
+}
+#main .box .content .four {
+    background-color: #1b936f;
+    width: 100%;
+    height: auto; /* 自動調整高度 */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 15px 0; /* 增加內部上下間距 */
+}
+
+#main .box .content .four .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0; /* 增加上下間距 */
+}
+
+#main .box .content .four .item .btn {
+    color: #1b936f;
+    padding: 5px 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    flex-shrink: 0; /* 保持按鈕大小固定 */
+    margin: 0 20px; /* 增加左右的外邊距，使按鈕不貼邊框 */
+}
+
+#main .box .content .four .item div:nth-child(2),
+#main .box .content .four .item div:nth-child(3) {
+    color: #fff;
+    text-align: center; /* 讓累積金額居中顯示 */
+    padding-left: 10px;
+    width: 100px; /* 固定寬度，保持數字區域寬度一致 */
+    display: inline-block;
+}
+
+#main .box .content .line {
+    border: 1px #138d64 solid;
+    height: 60px;
+    background-color: #138d64;
+    width: 1px;
+}
+#main .box .last {
+    background-color: #1b936f;
+    margin: 80px 0;
+    width: 90%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 30px 0;
+    align-items: center;
+}
+#main .box .last .l-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap; /* 使項目能夠換行 */
+}
+#main .box .last .l-content .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 調整項目之間的間隙 */
+    width: 45%; /* 確保每個項目佔據一半的空間 */
+    margin: 10px 0; /* 添加上下間距 */
+}
+#main .box .last .l-content .item div:nth-child(1) {
+    color: #D9D9D9; /* 設置類別的顏色 */
+    text-align: right; /* 右對齊類別 */
+    padding-right: 10px; /* 添加右邊距以確保與右邊對齊 */
+}
+
+#main .box .last .l-content .item div:nth-child(2) {
+    color: #fff; /* 設置物資和累積金額的顏色為白色 */
+    text-align: left; /* 左對齊物資和累積金額 */
+    padding-left: 10px; /* 添加左邊距以確保與左邊對齊 */
+}
+#main .box .last .f-title {
+    margin-top: 30px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between; /* 調整項目之間的間隙 */
+    align-items: center; /* 垂直居中對齊 */
+    flex-wrap: wrap; /* 使項目能夠換行 */
+}
+#main .box .last .f-title .l-t {
+    display: flex;
+    align-items: center;
+}
+#main .box .last .f-title .l-t div:nth-child(1) {
+    margin-right: 30px;
+    color: #D9D9D9; /* 設置證明紀錄的顏色 */
+    text-align: right; /* 右對齊證明紀錄 */
+    padding-right: 10px; /* 添加右邊距以確保與右邊對齊 */
+}
+#main .box .last .f-title .l-t div:nth-child(2) {
+    color: #fff; /* 設置IPFS的顏色為白色 */
+    text-align: left; /* 左對齊IPFS */
+    padding-left: 10px; /* 添加左邊距以確保與左邊對齊 */
+}
+/* 新增按鈕樣式 */
+#main .box .detail-button {
+    background-color: #1b936f;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 50px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;
+    text-decoration: none; /* 移除文字底線 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 查看金流明細按鈕樣式 */
+.details-btn {
+    background-color: #1b936f;
+    color: #fff;
+    font-size: 18px; /* 根據需要調整字體大小 */
+    font-weight: bold;
+    padding: 15px 40px; /* 調整按鈕內部間距 */
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 90%; /* 調整按鈕寬度 */
+    margin: 20px auto; /* 上下添加適當的邊距並水平居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 當按鈕被點擊或聚焦時的效果 */
+.details-btn:active,
+.details-btn:focus {
+    background-color: #138d64;
+}
+
+/* 按鈕懸停時的效果 */
+.details-btn:hover {
+    background-color: #138d64;
+}
+.back-button {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px; /* 為箭頭留出空間 */
+    color: #000;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: myFont; /* 繼續使用自定義字體 */
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #000; /* 箭頭顏色 */
+    border-left: 2px solid #000; /* 箭頭顏色 */
+    transform: translateY(-50%) rotate(-45deg); /* 旋轉形成箭頭 */
+}

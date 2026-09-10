@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案管理</title>
+    <link rel="stylesheet" href="css/manage_new.css">
+</head>
+
+<body>
+    <div class="body">
+        <section class="manage_section">
+            <div class="manage_title">
+                <img class="img_back" src="https://c.animaapp.com/oatyzNsR/img/gravity-ui-arrow-left-2.svg"
+                    onclick="history.back()" />
+                <span>專案管理</span>
+            </div>
+        </section>
+        <section class="project_list">
+
+            <!-- 通過的專案用的card -->
+            <div class="project_card">
+                <img class="project_image" id="project_img_main">
+                <div class="project_info">
+                    <div class="project_name" id="project_name">通過的專案</div>
+                </div>
+                <div class="project_description">
+                    <span id="project_summary">項目概述</span>
+                </div>
+                <div class="project_status">
+                    <span id="project_status">審核狀態</span>
+                </div>
+                <div class="button_container">
+                    <button class="edit_button button_ok">修改專案</button>
+                    <button class="update_button button_ok">更新專案</button>
+                </div>
+            </div>
+
+
+            <!-- 沒過的專案用的card -->
+            <div class="project_card">
+                <img class="project_image" id="project_img_main">
+                <div class="project_info">
+                    <div class="project_name" id="project_name">沒過的專案</div>
+                </div>
+                <div class="project_description">
+                    <span id="project_summary">項目概述</span>
+                </div>
+                <div class="project_status">
+                    <span id="project_status">審核狀態</span>
+                </div>
+                <div class="button_container">
+                    <button class="update_check_button">更新審核資料</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <script src="./js/headlogo.js"></script>
+</body>
+
+</html>

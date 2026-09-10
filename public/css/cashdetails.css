@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.back-button {
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+  margin-left: 3%;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #1a936f;
+  margin: 0;
+}
+
+
+
+.h2 {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.h3 {
+
+  font-size: 20px;
+  color: #1a936f;
+  margin-bottom: 10px;
+}
+
+.target {
+  border: 2px solid #1a936f;
+  border-radius: 10px;
+  padding:10px 3% 10px;
+ 
+  margin-bottom: 10px;
+  background-color: #E2E2E2;
+}
+
+
+
+.amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.link {
+  color: #1879B0;
+  text-decoration: underline;
+  padding-bottom:  5px; ;
+}
+
+.linknone {
+  color: #000000;
+  font-weight: bold;
+  padding-bottom:  5px; ;
+}
+
+.category {
+  border: 2px solid #1a936f;
+  border-radius: 10px;
+  padding:10px 3% 10px;
+  
+  margin-bottom: 30px;
+  background-color:#E2E2E2;
+}
+.target>p ,.category>p{
+  font-size: 16px;
+  color: #1a936f;
+  
+  font-weight: bolder;
+
+}
+.target>p>span ,.category>p>span{
+  font-size: 16px;
+  color: black;
+  
+  
+
+}
+.box {
+  font-size: 16px;
+  color: #1A936F;
+  background-color: #fff;
+  padding: 0 15px;
+  border-radius: 5px; 
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: auto;
+  
+  border: 3px #1A936F solid;
+}
+.target-zone {
+  margin-top: 0;
+  margin-left: 3%;
+  margin-right: 3%;
+  }
+.target-zone>h3 {
+  font-size: 20px;
+  color: #1a936f;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.category-zone
+{
+  margin-top: 0;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.proof1{
+  color: #1A936F;
+  font-size: 16px;
+  font-weight: bolder ;
+}
+.proof2{
+  color: #1A936F;
+  font-size: 16px;
+  font-weight: bolder ;
+}
+.proof3{
+  color: #1A936F;
+  font-size: 16px;
+  font-weight: bolder ;
+}

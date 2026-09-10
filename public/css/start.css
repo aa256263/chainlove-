@@ -1,0 +1,69 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container {
+  background-color: #fff;
+  max-width: 100%; /* 更改為100% */
+  padding: 5% 5%; /* 使用百分比以達到動態調整 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 50px auto;
+  align-items: center;
+}
+
+.login-button {
+  background-color: #1a936f;
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 26px 100px;
+  font: 700 24px Inter, sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+
+.login-button:hover {
+  background-color: #12684e;
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 26px 100px;
+  font: 700 24px Inter, sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.register-button {
+  background-color: #e2e2e2;
+  color: #1a936f;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 26px 100px;
+  font: 700 24px Inter, sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+
+.register-button:hover {
+  background-color: #b1b1b1;
+  color: #1a936f;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  padding: 26px 100px;
+  font: 700 24px Inter, sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 200px;
+}

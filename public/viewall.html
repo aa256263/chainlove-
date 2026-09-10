@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head >
+		<meta charset="utf-8">
+		<title>viewall</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="./css/common.css" />
+		<link rel="stylesheet" href="./css/information.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/index1_1.css" />
+		<link rel="stylesheet" href="./css/messagebox.css">
+
+
+	</head>
+	<body>
+		<div class="view informationTitle">
+			<a href="./index.html">
+				<img src="./images/back.png" alt="" />
+			</a>
+			<h1>所有專案</h1>
+		</div>
+		
+			 <div class="view">
+			<div class="searchLine">
+				<img src="./images/search.png" alt="" />
+				<input type="text" name="keyword" id="keyword" placeholder="搜尋專案" />
+				<img id="searchPageBtn"  src="./images/filter.png" alt="" />
+			</div>
+		</div>
+		<main>
+		<div class="view">
+			<div id="message-box" class="message-box" style="display: none;"></div>
+			<div id="approved-projects-container" class="resultList">
+				
+				
+				
+			</div>
+		</div>
+		 <!-- 新增的彈窗 -->
+		 <div id="categoryModal" class="modal">
+			<div class="modal-content container">
+				<span class="close">&times;</span>
+				<h2 class="title">進階搜尋</h2>
+				<div class="search_container">
+					<span class="category-title">分類</span>
+					<div class="category-buttons">
+						<label class="category-btn">
+							<input type="radio" name="category" value="all">
+							<span>所有</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="older">
+							<span>老人</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="technology">
+							<span>科技</span>
+						</label>
+					</div>
+					<div class="category-buttons">
+						<label class="category-btn">
+							<input type="radio" name="category" value="naturaldisaster">
+							<span>天災</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="student">
+							<span>學生</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="hunger">
+							<span>飢荒</span>
+						</label>
+					</div>
+					<div class="category-buttons">
+						<label class="category-btn">
+							<input type="radio" name="category" value="environment">
+							<span>環境</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="child">
+							<span>婦幼</span>
+						</label>
+						<label class="category-btn">
+							<input type="radio" name="category" value="medical">
+							<span>疾病</span>
+						</label>
+					</div>
+					<button type="button" id="search-button" class="submit-btn">進階搜尋</button>
+				</div>
+			</div>
+		</div>
+		</main>
+		<script src="./js/viewall.js"></script>
+		<script src="./js/headlogo.js"></script>
+
+	</body>
+</html>

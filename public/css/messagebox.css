@@ -1,0 +1,14 @@
+.message-box {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background-color:#329c7c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.message-box.hide {
+    display: none;
+}

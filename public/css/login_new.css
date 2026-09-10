@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('../font/SourceHanSansSC.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: myFont, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.login-container {
+    padding: 20px;
+}
+.back-button {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+}
+.login-title {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.login-subtitle {
+    font-size: 20px;
+    color: #888;
+}
+.input-group {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.input-group label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.input-group input {
+    font-size: 20px;
+    width: 100%;
+    height: 55px;
+    padding: 12px;
+    background-color: #E2E2E2;
+    border: 2px solid #949494;
+    border-radius: 10px;
+}
+.input-group input::placeholder {
+    color: #999;
+}
+.login-button {
+    background-color: #1a936f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 73px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 20px;
+}
+.register-link {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    color: #949494;
+}
+.register-link a {
+    color: #1a936f;
+    text-decoration: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上傳開銷</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/upload_expense.css">
+           
+</head>
+<body>
+    <div class="view">
+        <header class="header">
+            <a onclick="history.back()" class="back-button">←</a>
+            <h1>上傳開銷</h1>
+        </header>
+        <form class="upload-form">
+            <div class="form-group" style="display: none;">
+                <label for="project_name">項目名稱</label>
+            <input type="text" id="project_name" name="project_name" >
+            </div>   
+            <div class="form-group" style="display: none;">
+                <label for="project_id">項目ID</label>
+            <input type="text" id="project_id" name="project_id"  >
+            </div> 
+            <div class="form-group">
+                <label for="expense_title">類別</label>
+                <select id="expense_title" name="expense_title" >
+                    <option value="">請選擇類別</option>
+                    <option value="人力">人力</option>
+                    <option value="物資">物資</option>
+                    <option value="資助">資助</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expense">金額(TWD)</label>
+                <input type="text" id="expense" name="expense" inputmode="numeric" placeholder="請輸入金額">
+            </div>
+            <div class="form-group">
+                <label for="proof">開銷證明</label>
+                <div class="image-upload-container">
+                    <input type="file" id="proof" name="proof" accept="image/*" style="display: none;">
+                    <div class="image-preview" id="imagePreview">
+                        <img src="images/add-image.png" alt="上傳圖片">
+                        <span>點擊上傳圖片</span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="submitButton" class="submit-button">提交</button>
+        </form>
+    </div>
+
+    <script src="./js/upcost.js"></script>
+    <script src="./js/headlogo.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模擬全螢幕影片活動頁面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 確保影片維持正確的比例而不會變形 */
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .qr-code {
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            width: 20vw;
+            height: 20vw;
+            z-index: 10; /* 確保 QR Code 在影片上顯示 */
+        }
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container" id="videoContainer">
+        <!-- 插入影片 -->
+        <video id="myVideo" autoplay muted loop>
+            <source src="./video/try.mp4" type="video/mp4">
+            您的瀏覽器不支援 HTML5 影片。
+        </video>
+
+        <!-- 中間標題內容 -->
+        <div class="content">
+            <h1>歡迎參加我們的活動</h1>
+            <p>掃描右下角的 QR Code 來了解更多活動資訊</p>
+        </div>
+
+        <!-- 右下角的 QR Code -->
+        <div class="qr-code">
+            <img src="./qrcode/qr.ioi.tw.png" alt="活動 QR Code">
+        </div>
+
+        <!-- 全螢幕按鈕 -->
+        
+        <script src="./js/headlogo.js"></script>
+</body>
+</html>

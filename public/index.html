@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>鏈愛  Chain_Love</title>
+    <link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/index1_1.css" />
+    <link rel="stylesheet" href="./css/messagebox.css" />
+
+    
+</head>
+<body>
+    <div class="logoLine">
+        <a href="#">
+            <img src="./images/logo.png" alt=""  onclick="window.location.href='index.html'"/>
+        </a>
+        <a href="#">
+            <img src="./images/bell.png" alt="" id="info" />
+        </a>
+    </div>
+    <main>
+        
+        <div class="view">
+			<div class="searchLine">
+				<img src="./images/search.png" alt="" />
+				<input type="text" name="keyword" id="keyword" placeholder="搜尋專案" />
+				<img id="searchPageBtn"  src="./images/filter.png" alt="" />
+			</div>
+		</div>
+		<div class="view">
+			<div class="swiperWin">
+				<div class="swiperLine" id="top-projects-carousel">
+					<a href="./carouse1.html" class="swiper-slide">
+						<img src="./images/carouse1.png" alt="Project 1" />
+					</a>
+					<a href="./carouse2.html" class="swiper-slide">
+						<img src="./images/carouse2.png" alt="Project 2" />
+					</a>
+					<a href="./carouse3.html" class="swiper-slide">
+						<img src="./images/carouse3.png" alt="Project 3" />
+					</a>
+                    
+				</div>
+				<button type="button" class="swiper-button-prev" id="prev" style="display: none;">&lt;</button>
+				<button type="button" class="swiper-button-next" id="next"  style="display: none;">&gt;</button>
+				<div class="swiperPot" >
+					<div class="swiperP" data-index="0"></div>
+					<div class="swiperP" data-index="1"></div>
+					<div class="swiperP" data-index="2"></div>
+                    
+				</div>
+			</div>
+		</div>
+        <div class="view">
+            <div id="message-box" class="message-box" style="display: none;"></div>
+			<div class="project-total">
+				<h1>熱門專案</h1>
+				<a class="status" onclick="window.location.href='./viewall.html'">觀看全部</a>
+			</div>
+            
+            <div id="approved-projects-container" class="resultList">
+                
+             <!-- 這裡會放置通過批准的項目卡片 -->
+             </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="menu">
+            <div class="menuLine">
+                <a href="./index.html" class="menuItem" index="0"></a>
+                <a href="./nearby.html" class="menuItem" index="1"></a>
+                <a href="./bookmask.html" class="menuItem" index="2"></a>
+                <a href="./profile.html" class="menuItem" index="3"></a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- 新增的彈窗 -->
+    <div id="categoryModal" class="modal">
+        <div class="modal-content container">
+            <span class="close">&times;</span>
+            <h2 class="title">進階搜尋</h2>
+            <div class="search_container">
+                <span class="category-title">分類</span>
+                <div class="category-buttons">
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="all">
+                        <span>所有</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="older">
+                        <span>老人</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="technology">
+                        <span>科技</span>
+                    </label>
+                </div>
+                <div class="category-buttons">
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="naturaldisaster">
+                        <span>天災</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="student">
+                        <span>學生</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="hunger">
+                        <span>飢荒</span>
+                    </label>
+                </div>
+                <div class="category-buttons">
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="environment">
+                        <span>環境</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="child">
+                        <span>兒童</span>
+                    </label>
+                    <label class="category-btn">
+                        <input type="radio" name="category" value="medical">
+                        <span>醫療</span>
+                    </label>
+                </div>
+                <button type="button" id="search-button" class="submit-btn">進階搜尋</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

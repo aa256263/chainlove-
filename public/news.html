@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上傳新聞</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/upload_news.css">
+</head>
+<body>
+    <div class="view">
+        <header class="header">
+            <a href="#" class="back-button" onclick="history.back()">←</a>
+            <h1>上傳新聞</h1>
+        </header>
+        <form class="upload-form" id="projectUpdateNewsForm">
+            
+            <div class="form-group">
+                <label for="project_image">
+                    <div class="image-upload-container">
+                        <input type="file" id="project_image" name="project_image" accept="image/*" style="display: none;">
+                        <div class="image-preview" id="imagePreview">
+                            <img src="images/add-image.png" alt="上傳圖片">
+                            <span>點擊上傳圖片</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <label for="project_id" style="display: none;">新聞id</label>
+            <input type="text" id="project_id" name="project_id" required style="display: none;">
+            <div class="form-group">
+                <label for="projectudNews_name">標題名稱</label>
+                <input type="text" id="projectudNews_name" name="projectudNews_name"  placeholder="請輸入標題" required>
+            </div>
+            <div class="form-group">
+                <label for="projectud_article">更新內容</label>
+                <textarea type="text" class="text-input" id="projectud_article" name="projectud_article" placeholder="請輸入更新內容" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">提交</button>
+        </form>
+    </div>
+
+    <script src="./js/news.js"></script>
+    <script src="./js/headlogo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儲存成功</title>
+</head>
+<body>
+    <h1>位置儲存成功</h1>
+    <button id="logoutButton">登出並刪除資料</button>
+
+    <script>
+        // 取得 URL 中的 box_id 參數
+        const urlParams = new URLSearchParams(window.location.search);
+        const boxId = urlParams.get('box_id');
+
+        // 登出按鈕的功能
+        document.getElementById('logoutButton').addEventListener('click', async function() {
+            if (confirm('確定要刪除此資料並登出嗎？')) {
+                const response = await fetch(`/api/delete-location/${boxId}`, {
+                    method: 'DELETE',
+                });
+
+                if (response.ok) {
+                    alert('資料已刪除');
+                    window.location.href = './donateboxLocate.html';  // 返回首頁
+                } else {
+                    alert('刪除資料失敗');
+                }
+            }
+        });
+    </script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

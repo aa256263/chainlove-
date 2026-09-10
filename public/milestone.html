@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上傳里程碑證明</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/update_milestone.css">
+</head>
+<body>
+    <div class="view">
+        <header class="header">
+            <a href="#" class="back-button" onclick="history.back()">←</a>
+            <h1>上傳里程碑證明</h1>
+        </header>
+        <form id="projectUpdateForm" class="upload-form">
+            <div class="form-group">
+                <label for="project_id" style="display: none;">專案 ID</label>
+                        <input type="text" id="project_id" name="project_id" style="display: none;" required>
+                <label for="milestone_proof1">
+                    <div class="image-upload-container">
+                        <input type="file" id="milestone_proof1" name="milestone_proof1" accept="image/*" style="display: none;">
+                        <div class="image-preview" id="imagePreview1">
+                            <img src="images/add-image.png" alt="上傳圖片">
+                            <span>點擊上傳圖片</span>
+                        </div>
+                    </div>
+                </label>
+                
+                <label for="milestone_proof2" style="display: none;">
+                    <div class="image-upload-container">
+                        <input type="file" id="milestone_proof2" name="milestone_proof2" accept="image/*" style="display: none;">
+                        <div class="image-preview" id="imagePreview2">
+                            <img src="images/add-image.png" alt="上傳圖片">
+                            <span>點擊上傳圖片</span>
+                        </div>
+                    </div>
+                </label>
+                
+                <label for="milestone_proof3" style="display: none;">
+                    <div class="image-upload-container">
+                        <input type="file" id="milestone_proof3" name="milestone_proof3" accept="image/*" style="display: none;">
+                        <div class="image-preview" id="imagePreview3">
+                            <img src="images/add-image.png" alt="上傳圖片">
+                            <span>點擊上傳圖片</span>
+                        </div>
+                    </div>
+                </label>                       
+            </div>
+            <div class="form-group">
+                <label for="new_project_content">活動及開銷內容</label>
+                <textarea type="text" class="text-input" id="new_project_content" name="new_project_content" placeholder="活動及關鍵內容"></textarea>
+            </div>
+            <button type="submit" class="submit-button">提交</button>
+        </form>
+    </div>
+    <script src="./js/milestone.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

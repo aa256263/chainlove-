@@ -1,0 +1,75 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #1a936f;
+    margin: 0;
+}
+
+.milestone-section {
+    margin-bottom: 30px;
+}
+
+.milestone-section h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.milestone-section h3 {
+    font-size: 20px;
+    color: #1A936F;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.status {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.achieved {
+    background-color: #e6f3f0;
+    color: #329c7c;
+}
+
+.uploaded {
+    background-color: #e6f3f0;
+    color: #329c7c;
+}
+
+.milestone-title {
+    font-size: 16px;
+    color: #1A936F;
+    margin: 0;
+}
+
+.proof-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proof-image {
+    width: 30%;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}

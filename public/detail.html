@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案內容</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/project_details.css">
+    <link rel="stylesheet" href="./css/messagebox.css">
+
+</head>
+
+<body>
+    <div class="view">
+        <header class="header">
+            <a href="#" class="back-button"  onclick=location.href="index.html">←</a>
+            <h1>專案內容</h1>
+        </header>
+
+        <div class="project-image">
+            <!-- 專案圖片將通過 CSS 背景圖片設置 -->
+            <img src="images/result.jpg" alt="專案圖片">
+        </div>
+
+        <div class="project-info" id="infocontainer">
+            <div class="project-title-container">
+                <h2 id="projectname" class="project-title">專案名稱</h2>
+                <div class="favorite-icon" onclick="toggleFavorite(this)">
+                    <img src="images/bookmark.png" alt="收藏" class="empty-bookmark">
+                    <img src="images/bookmark_filled.png" alt="已收藏" class="filled-bookmark">
+                </div>
+            </div>
+            <div id="message-box" class="message-box" style="display: none;"></div>
+            <div class="resultProgressMsg">
+                <div class="resultBottom">
+                    <span id="project-tag" class="project-tag">標籤</span>
+                    <div class="resultPer">
+                        <span id="cumulative-amount">0</span>/<span id="final-cost">0</span>(<span id="donation-ratio">0%</span>)
+                    </div>
+                </div>
+                <div class="resultProgress">
+                    <div id="progress-line" class="resultProgressLine" style="width: 0%;"></div>
+                </div>
+                <div class="resultBottom">
+                    <div class="resultPeople"><span id="donor-count">0</span></div>
+                    <div class="resultTime">於<span id="project-final-date">2024/05/15</span>截止</div>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <span id="project-content">項目資訊</span>
+        </div>
+        <div>
+            <div class="text-left" id="project-code">勸募許可文號：北市社團字第1133196927號</div>
+        </div>
+    
+        <div class="project-actions">
+            <div class="action-btn">
+                <span id="project-agency">機構名稱</span>
+                <p  id="project-address" class="address">地址</p>
+            </div>
+        </div>
+        
+        <div class="project-total">
+            <span>近況更新</span>
+            <a id="gonewsupdate" class="uploaded status">觀看全部</a>
+        </div>
+
+        <div id="newscard" class="resultCard">
+            <img src="images/result.jpg" alt="" />
+            <div class="informationLine">
+                <h1 id="news-title" class="informationTitle">通知標題</h1>
+                <p id="news-content" >上傳日期</p>
+            </div>
+        </div>
+
+        <div class="project-total">
+            <span>階段目標</span>
+            <a id="gomilestone" class="uploaded status">檢視內容</a>
+        </div>
+        <div class="project-actions">
+            <div class="target-btn">
+                <span>目標金額</span>
+                <a class="targettext" id="gomilestonecash">金額</a>
+            </div>
+        </div>
+        
+        <div class="project-total">
+            <span>捐款名單</span>
+            <a id="godonors" class="uploaded status">查看全部</a>
+        </div>
+        <div class="top-donors">
+            <div class="donor-list">
+                <div class="donor">
+                    <img src="./images/doner.png" />
+                    <span class="donor-id">ID</span>
+                    <span class="donor-id">1000</span>
+                </div>
+                <div class="donor">
+                    <img src="./images/doner.png" />
+                    <span class="donor-id">ID</span>
+                    <span class="donor-id">1000</span>
+                </div>
+                <div class="donor">
+                    <img src="./images/doner.png" />
+                    <span class="donor-id">ID</span>
+                    <span class="donor-id">1000</span>
+                </div>
+                <div class="donor">
+                    <img src="./images/doner.png" />
+                    <span class="donor-id">ID</span>
+                    <span class="donor-id">1000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-total">
+            <span>資金流向</span>
+            <a class="uploaded status" id="fund-allocation">詳細內容</a>
+        </div>
+        <div class="fund-allocation">
+            <div class="allocation-items">
+                <div class="allocation-item">
+                    <span class="allocation-type">物資</span>
+                    <span class="allocation-amount">10000</span>
+                </div>
+                <div class="allocation-item">
+                    <span class="allocation-type">人力</span>
+                    <span class="allocation-amount">10000</span>
+                </div>
+                <div class="allocation-item">
+                    <span class="allocation-type">資助</span>
+                    <span class="allocation-amount">10000</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <button id="donate-btn" type="button" class="donate-btn">捐款</button>
+    </div>
+
+    <script src="./js/detail.js"></script>    
+    <script src="./js/headlogo.js"></script>
+</body>
+
+</html>

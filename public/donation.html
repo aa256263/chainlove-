@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捐款頁面</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/donate.css">
+    <link rel="stylesheet" href="./css/load.css">
+    <link rel="stylesheet" href="./css/success.css">
+    <link rel="stylesheet" href="./css/error.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script> <!-- Ethers.js -->
+    <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script> <!-- MetaMask SDK -->
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <div class="view">
+        <header class="header">
+            <a  class="back-button" onclick="history.back()">←</a>
+            <h1>捐款</h1>
+        </header>
+        <div class="donate-form">
+            <div class="form-group">
+                <label for="project">選擇專案</label>
+                <select id="projectSelect" name="projectSelect" placeholder="選擇專案" required disabled>
+                    <!-- 專案新增 -->
+                </select>
+            </div>
+            <input type="text" id="userId" name="userId" readonly style="display:none">
+            <div class="form-group" style="display:none">
+                <label for="contract">合約</label>
+                <input type="text" id="contract" name="contract" readonly>
+            </div>
+
+            <div id="transactionHash" style="display: none;"></div>
+            <div class="form-group">
+                <span>匯率換算</span>
+                <div class="switch-group">
+                    <input type="number" id="donationAmountTWD" name="donationAmountTWD" 
+                        oninput="convertTwdToEth()" placeholder="輸入台幣金額">
+                    <span class="switch-icon" ><img src="./images/swap.png"></span>
+                    <input type="number" id="donationAmount" name="donationAmount" oninput="convertEthToTwd()"
+                        placeholder="輸入以太幣數量">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="wallet">加密貨幣錢包</label>
+                <input type="text" id="wallet" name="wallet" readonly>
+                <span class="notice">加密貨幣轉帳時會消耗1~2美金的Gas fee (使用ERC20進行轉帳)</span>
+            </div>
+            <div class="button-group">
+                <button type="button" class="wallet-button" id="connectButton" name="connectButton">連接錢包</button>
+                <button type="button" class="submit-button" id="donateButton">確認捐款</button>
+            </div>
+        </div>
+    </div>
+    <!-- Loading 動畫 -->
+<div id="loadingModal"  class="loading-component" style="display: none;">
+    <div class="loading-component__container">
+        <div class="loading-component__circle">
+            <div class="loading-component__spinner"></div>
+        </div>
+        <div class="loading-component__text">正在處理</div>
+        <div class="loading-component__subtext">需等待30-60秒...</div>
+    </div>
+</div>
+
+    <!-- Success 動畫 -->
+    <div id="successModal"  style="display: none;" class="success-component">
+        <div class="success-component__container">
+            <div class="success-component__circle">
+                <svg class="success-component__checkmark" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 52 52">
+                    <circle class="success-component__checkmark-circle" cx="26" cy="26" r="25" fill="none"></circle>
+                    <path class="success-component__checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                </svg>
+            </div>
+            <div class="success-component__text">感謝您的捐款!</div>
+            <div class="success-component__subtext">您的捐款已成功劃轉至智能合約</div>
+        </div>
+    </div>
+
+    <!-- Error 動畫 -->
+    <div class="error-component" id="errorModal" style="display: none;">
+        <div class="error-component__container">
+            <div class="error-component__circle">
+                <div class="error-component__icon"></div>
+            </div>
+            <div class="error-component__text">捐款失敗</div>
+            <div class="error-component__subtext">很抱歉，請再試一次</div>
+        </div>
+    </div>
+    <script src="./js/Contractindex.js" ></script>
+    <script src="./js/donation.js" ></script>
+    <script src="./js/change.js" ></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.logo {
+    width: 30px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.header .back-arrow {
+    font-size: 24px;
+}
+
+.main-container {
+    padding: 20px;
+    background-color: white;
+}
+
+.tags {
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.follow-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.deadline {
+    color: #888;
+    font-size: 14px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    width: 50%; /* Assume 50% progress */
+    background-color: #1a936f;
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    padding-right: 10px;
+}
+
+.donate-button {
+    background-color: #1a936f;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.donate-button:active {
+    background-color: #137a5a;
+}
+
+.donate-info {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* 捐款選項的樣式 */
+.donation-options {
+display: flex;
+justify-content: space-evenly;
+background-color: #1a936f;
+padding: 20px;
+color: white;
+margin-top: 20px;
+}
+
+/* 進度報告卡片的樣式 */
+.progress-report .report-card {
+background-color: #e4e4e4;
+margin: 20px 0;
+padding: 20px;
+}
+
+/* 捐款方式按鈕的樣式 */
+.donation-methods {
+text-align: center;
+margin: 20px 0;
+}
+
+.donation-methods .method {
+background-color: #1a936f;
+color: white;
+padding: 15px 30px;
+margin: 0 10px;
+border: none;
+border-radius: 5px;
+}
+
+/* 捐款者名單的樣式 */
+.donors-list {
+display: flex;
+justify-content: space-evenly;
+margin: 20px 0;
+}
+
+.donors-list .donor {
+background-color: #1a936f;
+color: white;
+padding: 10px;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}

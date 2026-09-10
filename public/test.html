@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案更新表單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="file"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #imagePreview {
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #imagePreview img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="goback">
+            <img class="img_back" src="https://c.animaapp.com/oatyzNsR/img/gravity-ui-arrow-left-2.svg" onclick="history.back()" />
+        </div>
+        <h2>里程碑更新</h2>
+        <form id="projectUpdateForm" enctype="multipart/form-data">
+            <label for="project_id" style="display: none;">專案 ID</label>
+            <input type="text" id="project_id" name="project_id" style="display: none;" required>
+
+            <label for="projectud_stage">更新階段</label>
+            <select id="projectud_stage" name="projectud_stage" required>
+                <option value="M1">階段1</option>
+                
+            </select>
+
+            <label for="new_project_content">新專案內容</label>
+            <textarea id="new_project_content" name="new_project_content" rows="5" required></textarea>
+
+            <label for="projectud_images">專案圖片</label>
+            <input type="file" id="projectud_images" name="projectud_images" accept="image/*" multiple required>
+
+            <button type="submit">提交更新</button>
+        </form>
+        <div id="imagePreview" id="preview-container"></div>
+    </div>
+    <script src="./js/milestone.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.font1 {
+    color: black;
+    margin-top: 30px;
+    font: 700 36px Inter, sans-serif;
+    
+}
+
+.login-description {
+    color: #949494;
+    margin-top: 12px;
+    font: 700 20px Inter, sans-serif;
+}
+
+.email-label {
+    color: #000;
+    margin-top: 41px;
+    font: 700 20px Inter, sans-serif;
+}
+
+.email-input {
+    border-radius: 10px;
+    background-color: #e2e2e2;
+    margin-top: 7px;
+    color: #949494;
+    padding: 18px 15px;
+    font: 700 20px Inter, sans-serif;
+}
+
+.password-label {
+    color: #000;
+    margin-top: 34px;
+    font: 700 20px Inter, sans-serif;
+}
+
+.password-input {
+    color: #949494;
+    border-radius: 10px;
+    background-color: #e2e2e2;
+    
+    padding: 18px 15px;
+    font: 700 20px Inter, sans-serif;
+}
+
+.signup-link {
+    color: #1a936f;
+    
+    align-self: center;
+    margin-top: 17px;
+    font: 700 16px Inter, sans-serif;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.login-button {
+    border-radius: 10px;
+    background-color: #1a936f;
+    margin-top: 23px;
+    color: #fff;
+    text-align: center;
+    padding: 26px 85px;
+    font: 700 24px Inter, sans-serif;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 100%; /* 更改為100%，以便於在小屏幕上更好地適應 */
+    padding: 15px;
+    margin: auto;
+}
+
+.don-container {
+    background-color: #fff;
+
+    max-width: 100%; /* 更改為100% */
+    padding: 5% 3%; /* 使用百分比以達到動態調整 */
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.logo {
+    width: 30px;
+}
+@media (min-width: 768px) {
+    .form-signin,
+    .don-container {
+        max-width: 360px; /* 在較大螢幕上限制最大寬度 */
+        padding: 52px 30px 80px; /* 大屏幕上使用更大的填充 */
+    }
+}
+
+@media (max-width: 320px) {
+    .form-signin,
+    .don-container {
+        padding: 30px 20px 60px; /* 小屏幕上使用較小的填充 */
+    }
+}

@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* 保证盒模型包含边框和内边距 */
+    -webkit-font-smoothing: antialiased; /* 字体抗锯齿 */
+    -moz-osx-font-smoothing: grayscale; /* 字体抗锯齿 */
+}
+
+/* 将 ol, ul, li 列表样式重置为 none，以移除默认的项目符号和内边距 */
+ol, ul {
+    list-style: none;
+}
+
+/* 将 blockquote, q 引用样式重置为无边框和背景 */
+blockquote, q {
+    quotes: none;
+}
+
+.list-item>div.btn{
+    border: 3px solid #949494;
+    background: #fff;
+    padding:5px 0;
+    border-radius:10px;
+    box-sizing: border-box;
+    width: 90px;
+    margin:0 auto;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* 使表格没有边框、内边距、外边距，并设置为合并边框模型 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 移除默认的选择框样式 */
+input, button, textarea, select {
+    outline: none;
+    border: none;
+}
+
+/* 移除超链接下划线，除非使用 :focus 伪类 */
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+.topUl{
+    padding-top:48px;
+    padding-left:30px;
+}
+.back{
+  width:40px;
+  height: 43px;
+}
+.title{
+    color: #1A936F;
+    font-size:35px;
+    font-weight: 700;
+}
+.center-box{
+    margin-top: 48px;
+    border:6px solid  #1A936F;
+    border-radius:10px;
+    height: calc(100vh - 150px);
+    overflow: auto;
+    background: rgb(214,214,214);
+}
+.center-box .table-top{
+    font-size:25px;
+    color:#949494;
+    display: flex;
+    font-weight: bold;
+    padding:15px 0;
+}
+.center-box .table-top>div{
+    width: 33%;
+    text-align: center;
+}
+.list-item{
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    color: #000;
+    font-size:23px;
+    border-top: 2px solid #949494;
+    height:75px;
+}
+.list-item>div{
+    width: 33%;
+}
+.list-item>div.btn{
+    border: 2px solid #949494;
+    background: #fff;
+    padding:10px 0;
+    border-radius:10px;
+    box-sizing: border-box;
+    width: 120px;
+    margin:0 auto;
+}
+.flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}

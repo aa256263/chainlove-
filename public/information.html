@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通知信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/information.css" />
+		<style>
+			h1 {
+				font-size: 32px;
+				color: #1a936f;
+				margin: 0;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="view informationTitle">
+			<header class="header">
+				<a onclick="history.back()" class="back-button">←</a>
+				<h1>通知</h1>
+			</header>
+		</div>
+		<div class="view tabs">
+			<button data-type="1" select="1">已捐款</button>
+			<button data-type="2">已達標</button>
+			<button data-type="3">系統</button>
+		</div>
+		
+		<div class="notificationList view ">
+			<div id="approved-projects-container" class="resultList">
+				<div class="resultCard">
+					<img src="images/result.jpg" alt="" />
+					<div class="informationLine">
+						<h1 class="informationTitle">通知標題</h1>
+						<p class="informationCntent">詳細內容。</p>
+					</div>
+				</div>
+				<div class="resultCard">
+					<img src="images/result.jpg" alt="" />
+					<div class="informationLine">
+						<h1 class="informationTitle">通知標題</h1>
+						<p class="informationCntent">詳細內容。</p>
+					</div>
+				</div>
+				<div class="resultCard">
+					<img src="images/result.jpg" alt="" />
+					<div class="informationLine">
+						<h1 class="informationTitle">通知標題</h1>
+						<p class="informationCntent">詳細內容。</p>
+					</div>
+				</div>
+				<div class="resultCard">
+					<div class="noContentLine">
+						<p class="noContent">尚無通知</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/information.js"></script>
+		<script src="./js/headlogo.js"></script>
+		
+	</body>
+</html>

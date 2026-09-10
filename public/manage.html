@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理我的專案</title>
+    <link rel="stylesheet" href="css/manage_new.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body >
+    <div class="view">
+        <div class="informationTitle">
+        <header class="header">
+            <a href="profile.html" class="back-button">←</a>
+            <h1>專案管理</h1>
+        </header>
+        </div>
+        <div id="container">
+            <!-- 專案數據將被填充於此 -->
+              <div class="project_card">
+                        <img src="./images/result.jpg" id="project_img_main" alt="" />
+                        <div class="informationLine">
+                            <h1 class="informationTitle" id="project_name">一二三</h1>
+                            <span >已通過</span>
+                            <span id="project_status_${project.project_id}">已通過</span>
+                            <button class="button">更新進度</button>
+                        </div>
+                    </div>
+        </div>
+        
+    </div>
+    
+
+   
+
+    <script src="./js/manage.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

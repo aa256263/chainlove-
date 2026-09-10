@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cost Review</title>
+<link href="./css/audit.css" rel="stylesheet">
+</head>
+<body onload="loadNewUnapprovedCosts()">
+    <div class="navbar">
+        <div class="menu-icon" onclick="openNav()">&#9776;</div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./login.html">登出</a>
+        <a href="./getdata.html">項目審核</a>
+        <a href="./auditmilestone.html">里程碑審核</a>
+        <a href="./auditnews.html">新聞審核</a>
+        <a href="./auditupcost.html">金流審核</a>
+    </div>
+
+    <div class="container">
+        <h1>金流更新審核</h1>
+        <label for="costId">選擇未審核的金流更新</label>
+        <select id="costId" name="costId">
+            <!-- 選項將在這裡動態加載 -->
+        </select>
+        <button onclick="fetchCost()">確認</button>
+        
+        <div id="costContainer"></div>
+    </div>
+
+    <script src="./js/auditupcost.js"></script>
+    <script src="./js/headlogo.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+</html>

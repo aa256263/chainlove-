@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>進階搜尋</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <span class="title">
+                <img class="img_back" src="https://c.animaapp.com/oatyzNsR/img/gravity-ui-arrow-left-2.svg" onclick="history.back()" />進階搜尋
+            </span>
+            <div class="search_container">
+                <span class="category-title">分類</span>
+                <div class="search_container">
+                    <div class="category-buttons">
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="動物">
+                            <span>動物</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="人權">
+                            <span>人權</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="校園">
+                            <span>校園</span>
+                        </label>
+                    </div>
+                    <div class="category-buttons">
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="天災">
+                            <span>天災</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="政治">
+                            <span>政治</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="飢荒">
+                            <span>飢荒</span>
+                        </label>
+                    </div>
+                    <div class="category-buttons">
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="環境">
+                            <span>環境</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="婦幼">
+                            <span>婦幼</span>
+                        </label>
+                        <label class="category-btn">
+                            <input type="checkbox" name="category" value="種族">
+                            <span>種族</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="submit-btn" onclick="searchProjects()">進階搜尋</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function searchProjects() {
+            const selectedCategories = [];
+            document.querySelectorAll('input[name="category"]:checked').forEach(checkbox => {
+                selectedCategories.push(checkbox.value);
+            });
+            // 這裡需要實現你搜尋的邏輯，可能需要根據選擇的分類進行搜索並顯示結果
+            console.log("Selected categories:", selectedCategories);
+        }
+    </script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

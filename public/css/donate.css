@@ -1,0 +1,136 @@
+
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #1a936f;
+    margin: 0;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.switch-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    margin: 0 auto;
+    /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+label {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+select,
+input[type="text"] {
+    padding: 0 10px;
+    border: 2px solid #949494;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #e2e2e2;
+    height: 40px;
+}
+input[type="number"] {
+    padding: 0 10px;
+    border: 2px solid #949494;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #e2e2e2;
+    height: 40px;
+    width: 40%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1a936f;
+}
+.switch-icon {
+    font-size: 24px;
+    padding: 10px;
+    color: #949494;
+}
+button {
+    background-color: #1a936f;
+    color: white;
+    border: 1px solid #949494;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 100%; /* 使用 width 而不是 max-width */
+    max-width: 768px; /* 保留最大寬度限制 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #147a5e;
+}
+.notice {
+    font-size: 16px;
+    color: #949494;
+}
+.informationTitle{
+	display: flex;
+	flex-direction: row;
+}
+.informationTitle>a{
+	width: 30px;
+	height: 30px;
+	margin: auto 0;
+	margin-right: 20px;
+}
+.informationTitle>h1{
+	font-size: 32px;
+	color: #1a936f;
+}
+
+/* @media (min-width: 769px) {
+    .button-group {
+        max-width: 709px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+} */

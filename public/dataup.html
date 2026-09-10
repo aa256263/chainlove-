@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/projectdata.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    
+    
+</head>
+
+<body>
+    
+    <div class="view">
+       
+        <header class="header">
+            <a href="profile.html" class="back-button">←</a>
+            <h1>新增專案</h1>
+        </header>
+    <form id="uploadForm" class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            
+            <label for="project_img1">專案圖片</label>
+
+            <div class="image-upload-container">
+                <input type="file" class="file-input" id="project_img1" name="project_img1" accept="image/*" style="display: none;">
+                <div class="image-preview" id="imagePreview">
+                    <img src="images/add-image.png" class="preview-image" alt="上傳圖片" id="previewImage">
+                    <span>點擊上傳圖片</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="project_name" class="project_detail">專案名稱</label>
+            <input type="text" id="project_name" name="project_name" />
+        </div>
+        <div class="form-group">
+            <label for="user_id" style="display: none;" class="project_detail">使用者id</label>
+            <input type="text" id="user_id" name="user_id" style="display: none;" />
+        </div>
+        <div class="form-group">
+            <label for="project_code" class="project_detail">衛服部活動許可文號</label>
+            <input type="text" id="project_code" name="project_code" />
+        </div>
+        <div class="form-group">
+            <label for="project_agency" class="project_detail">機構名稱</label>
+            <input type="text" id="project_agency" name="project_agency" />
+        </div>
+        <div class="form-group">
+            <label for="project_address" class="project_detail">機構地址</label>
+            <input type="text" id="project_address" name="project_address" />
+        </div>
+        <div class="form-group">
+            <label for="project_proofing">專案證明文件或企畫書</label>
+            <div class="image-upload-container">
+                <input type="file" class="file-input" id="project_proofing" name="project_proofimg" accept="image/*" style="display: none;">
+                <div class="image-preview" id="imagePreview">
+                    <img src="images/add-image.png" class="preview-image" alt="上傳圖片" id="previewImage">
+                    <span>點擊上傳圖片</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="project_tag" class="project_detail">標籤</label>
+            <select id="project_tag" name="project_tag">
+                <option value="older">老人</option>
+                <option value="child">兒童</option>
+                <option value="student">學生</option>
+                <option value="environment">環境</option>
+                <option value="technology">科技</option>
+                <option value="hunger">飢餓</option>
+                <option value="medical">醫療</option>
+                <option value="naturaldisaster">天災</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="project_content" class="project_detail">專案內容</label>
+            <textarea id="project_content" name="project_content"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="total_cost" class="project_detail">最終目標金額</label>
+            <input type="number" id="total_cost" name="total_cost" />
+        </div>
+        <div class="form-group">
+            <label for="milestone_title" class="project_detail">里程碑標題</label>
+            <textarea id="milestone_title" name="milestone_title"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="milestone_target_cost" class="project_detail">里程碑目標金額</label>
+            <input type="number" id="milestone_target_cost" name="milestone_target_cost" />
+        </div>
+        <div class="form-group">
+            <label for="milestone_cost_text" class="project_detail">里程碑摘要</label>
+            <textarea id="milestone_cost_text" name="milestone_cost_text"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="deadline" class="project_detail">專案截止日期</label>
+            <input type="date" id="deadline" name="deadline" />
+        </div>
+        <div class="form-group">
+            <label for="connect_wallet" class="project_detail">加密貨幣錢包</label>
+            <input type="text" id="connect_wallet" name="connect_wallet" disabled> 
+        </div>
+        <div class="form-group">
+            <button type="button" id="connect">連接加密貨幣錢包</button>
+            <button type="button" id="submitButton">新增專案</button>
+        </div>
+
+    </form>
+    </div>
+    
+    <script src="./js/dataup.js"></script>
+    <script>
+        document.querySelectorAll('.image-upload-container').forEach(container => {
+            const input = container.querySelector('.file-input');
+            const preview = container.querySelector('.image-preview');
+            const previewImage = preview.querySelector('.preview-image');
+            const previewText = preview.querySelector('span');
+
+            preview.addEventListener('click', () => {
+                input.click();
+            });
+
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImage.src = e.target.result;
+                        previewImage.style.display = 'block';
+                        previewText.style.display = 'none';
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+    <script src="./js/headlogo.js"></script>
+
+    
+</body>
+
+
+</html>

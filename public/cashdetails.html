@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金流明細</title>
+    <link rel="stylesheet" href="./css/cashdetails.css">
+</head>
+<body>
+    <header class="header">
+        <a class="back-button" onclick="history.back()">←</a>
+    
+        <h1>金流明細</h1>
+        </header>
+    
+       <div class="target-zone">
+            <h2>款項劃轉明細</h2>
+            <h3>階段目標</h3>
+            <div class="target">          
+                <p>累積金額 <span class="amount" id="targetamount">0</span></p>
+                <p>轉帳紀錄 <a class="link" href="#" id="targetlink">etherscan.io</a></p>
+            </div>
+            <h3>最終目標</h3>
+            <div class="target">          
+                <p>累積金額 <span class="amount" id="finalamount">0</span></p>
+                <p>轉帳紀錄 <a class="link" href="#" id="finallink">etherscan.io</a></p>
+            </div>
+        </div>
+       
+    
+    
+        <div class="category-zone">
+        
+            <h2>項目方開銷證明</h2>
+    
+            <div class="category" id="supply">
+                <h3 class="box">物資</h3>
+                <p>累積金額 <span class="amount">0</span></p>
+                <div class="proof1">
+                <p>證明紀錄 <a class="link" href="#">IPFS</a></p>
+                
+
+                
+                </div>
+            </div>
+    
+            <div class="category"id=manpower>
+                <h3 class="box">人力</h3>
+    
+                <p>累積金額 <span class="amount">0</span></p>
+                <div class="proof2">
+                <p>證明紀錄 <a class="link" href="#">IPFS</a></p>
+                <p>證明紀錄 <a class="linknone">無</a></p>                </div>
+            </div>
+    
+            <div class="category" id="fund">
+                <h3 class="box">資助</h3>
+                <p>累積金額 <span class="amount">0</span></p>
+                <div class="proof3">
+                <p>證明紀錄 <a class="link" href="#">IPFS</a></p>
+                
+                </div>
+            </div>
+        </div>
+    <script src="./js/cashdetails.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

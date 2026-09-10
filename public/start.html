@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歡迎使用我們的應用</title>
+    <link rel="stylesheet" href="css/start_new.css">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="./images/logo_big.png" alt="logo" onclick="window.location.href='index.html'">
+        <button id="loginbtn" class="btn">登入</button>
+        <button id="rgbtn" class="btn outline">註冊</button>
+    </div>
+
+    <script src="js/start.js"></script>
+    <script src="./js/headlogo.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-3px)';
+                });
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

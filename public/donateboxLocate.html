@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位置儲存</title>
+</head>
+<body>
+    <h1>捐款箱位置管理</h1>
+    
+    <form id="locationForm" enctype="multipart/form-data">
+        <label for="locationName">位置名稱：</label>
+        <input type="text" id="locationName" name="locationName"><br><br>
+
+        <label for="longitude">經度：</label>
+        <input type="text" id="longitude" name="longitude"><br><br>
+
+        <label for="latitude">緯度：</label>
+        <input type="text" id="latitude" name="latitude"><br><br>
+
+        <label for="boxPhoto">上傳圖片：</label>
+        <input type="file" id="boxPhoto" name="boxPhoto" accept="image/*"><br><br>
+
+        <button type="button" onclick="getLocation()">獲取位置</button>
+        <button type="submit">送出</button>
+    </form>
+    <script src="./js/headlogo.js"></script>
+    <script>
+        // 獲取當前位置
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById('longitude').value = position.coords.longitude;
+                    document.getElementById('latitude').value = position.coords.latitude;
+                });
+            } else {
+                alert("您的瀏覽器不支援地理位置功能");
+            }
+        }
+
+        // 表單提交處理
+        document.getElementById('locationForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('locationName', document.getElementById('locationName').value);
+            formData.append('longitude', document.getElementById('longitude').value);
+            formData.append('latitude', document.getElementById('latitude').value);
+            formData.append('boxPhoto', document.getElementById('boxPhoto').files[0]);
+
+            const response = await fetch('/api/add-location', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+            
+            if (response.ok) {
+                // 跳轉到新頁面，並傳遞 box_id
+                window.location.href = `/donateBox.html?box_id=${result.boxId}`;
+            } else {
+                alert(result.message);
+            }
+        });
+    </script>
+</body>
+</html>

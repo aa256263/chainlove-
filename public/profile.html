@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <!-- <link rel="stylesheet" href="./css/bookmask.css"> -->
+</head>
+
+<body>
+    <div class="view">
+        <h1 class="profile-title">會員中心</h1>
+        
+        <!-- 使用者已登入 -->
+        <div id="loggedInView" class="hidden">
+            <div class="profile-card">
+                <div class="amount-container">
+                    <p class="amount-label">累積金額</p>
+                    <p class="amount-value" id="total-donations">$</p>
+                </div>
+            </div>
+            <div class="user-info">
+                <p class="username" id="username">使用者名稱</p>
+                <p class="user-email" id="email">test@gmail.com</p>
+            </div>
+            <div class="action-buttons">
+                <a href="./manage.html" class="action-button" id="manage">
+                    <img src="./images/manage-icon.png" alt="管理專案" class="button-icon">
+                    <span>管理專案</span>
+                </a>
+                <a href="./dataup.html" class="action-button" id="data-up">
+                    <img src="./images/add-image.png" alt="新增專案" class="button-icon">
+                    <span>新增專案</span>
+                </a>
+                <a href="#" class="action-button" id="donation-record">
+                    <img src="./images/donation-record-icon.png" alt="捐款紀錄" class="button-icon">
+                    <span>捐款紀錄</span>
+                </a>
+                <a href="#" class="action-button logout-button" id="logoutBtn">
+                    <img src="./images/logout-icon.png" alt="登出" class="button-icon">
+                    <span>登出</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 使用者尚未登入 -->
+        <div id="loggedOutView"> 
+            <div class="user-info">
+                <p class="login-prompt">您尚未登入，登入取得更多資訊</p>
+            </div>
+            <div class="action-buttons">
+                <a href="./start.html" class="action-button login-button">
+                    <img src="./images/logout-icon.png" alt="登入" class="button-icon">
+                    <span>登入</span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="menu">
+            <div class="menuLine">
+                <a href="./index.html" class="menuItem" index="0"></a>
+                <a href="./nearby.html" class="menuItem" index="1"></a>
+                <a href="./bookmask.html" class="menuItem" index="2"></a>
+                <a class="menuItem" index="3"></a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/userinfo.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+
+
+</html>

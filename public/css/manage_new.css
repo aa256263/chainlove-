@@ -1,0 +1,91 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+}
+.project_card{
+	display: flex;
+	flex-direction: row;
+	background-color: #d9d9d9;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	height: 120px;
+	cursor: pointer;
+}
+.project_card>img{
+	width: 34%;
+	height: auto;
+	max-height: 150px;
+	object-fit: cover;
+}
+h1 {
+    font-size: 32px;
+    color: #1a936f;
+    margin: 0;
+}
+.informationTitle{
+	display: flex;
+	flex-direction: row;
+}
+.informationTitle>a{
+	width: 30px;
+	height: 30px;
+	margin: auto 0;
+	margin-right: 20px;
+}
+.informationTitle>h1{
+	font-size: 40px;
+	color: #1a936f;
+}
+
+.informationLine{
+	padding: 10px;
+	width: calc(70% - 20px);
+	overflow: hidden;
+	/* background-color: #1a936f ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.informationLine>h1{
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0;
+	color: black;
+}
+.informationLine>span{
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-size: 12px;
+	line-height: 15px;
+	color: #1a936f;
+}
+
+.informationLine>button{
+	font-size: 12px;
+	border: 2px solid #1a936f;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+    height: 30px;
+    background: #1a936f;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border-style: none;
+}

@@ -1,0 +1,13 @@
+<div class="card">
+  <a href="../detail.html?id=${project.project_id}">
+    <img class="imageset" src="${project.project_image1}" alt="Thumbnail" />
+    <h2>${project.project_name}</h2></a
+  >
+  <p>项目概述:${project.project_summary}</p>
+  <p>目标金额: $${project.total_amount}/$${project.total_cost}</p>
+  <button data-project-id="${project.project_id}" class="bookmark-btn">
+    ${project.bookmarked ? '已收藏' : '收藏'}
+  </button>
+</div>
+
+<link rel="stylesheet" href="./css/bookmask.css">

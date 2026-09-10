@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb76300c51f6fa1f11526a60745f202d20fd0b8a4d1e8b6374cfa9e6b1efc533?apiKey=9c7ef167fe714b44b3b64cb4b76952ce&" alt="Company logo" onclick="history.back()" />
+    <form
+      id="updateForm"
+      action="/upload"
+      method="POST"
+      enctype="multipart/form-data"
+      
+    >
+      <label for="project_name">項目名稱:</label>
+      <input type="text" id="project_name" name="project_name"/><br /><br />
+
+      <label for="user_id" style="display: none;">使用者id:</label>
+      <input type="text" id="user_id" name="user_id" style="display: none;" />
+
+      <label for="project_code">項目代碼:</label>
+      <input type="text" id="project_code" name="project_code" /><br /><br />
+
+      <label for="project_agency">項目機構:</label>
+      <input
+        type="text"
+        id="project_agency"
+        name="project_agency"
+      /><br /><br />
+
+      <label for="project_address" >項目地址:</label>
+      <input
+        type="text"
+        id="project_address"
+        name="project_address"
+        
+      /><br /><br />
+
+      <label for="project_proofimg">項目證明圖片:</label>
+      <input type="file" id="project_proofimg" name="project_proofimg" >
+      <div id="proofImgContainer"></div><br/><br/>
+
+      <label for="project_tag">項目標籤:</label>
+      <select id="project_tag" name="project_tag">
+        <option value="older">老人</option>
+        <option value="Education">教育</option>
+        <option value="Healthcare">醫療保健</option>
+        <option value="Environment">環境</option>
+        <option value="Technology">科技</option>
+        <option value="pet">寵物</option></select
+      ><br /><br />
+      <label for="project_summary">項目概述:</label>
+      <textarea id="project_summary" name="project_summary" ></textarea
+      ><br /><br />
+
+      <label for="project_content">項目內容:</label>
+      <textarea id="project_content" name="project_content"></textarea
+      ><br /><br />
+
+      <label for="total_cost">完整目標金額:</label>
+      <input
+        type="number"
+        id="total_cost"
+        name="total_cost"
+        
+      /><br /><br />
+
+      <label for="target1_cost">目標金額1:</label>
+      <input
+        type="number"
+        id="target1_cost"
+        name="target1_cost"
+        
+      /><br /><br />
+      <label for="target1_cost_text">目標金額1描述:</label>
+      <textarea id="target1_cost_text" name="target1_cost_text" title="目標1金額描述"></textarea
+        ><br /><br />
+
+      <label for="target2_cost">目標金額2:</label>
+      <input
+        type="number"
+        id="target2_cost"
+        name="target2_cost"
+        
+      /><br /><br />
+      <label for="target2_cost_text">目標金額2運用描述:</label>
+      <textarea id="target2_cost_text" name="target2_cost_text"" title="目標2金額描述"></textarea
+        ><br /><br />
+      
+        <label for="project_img1">項目圖片:</label>
+        <input type="file" id="project_img1" name="project_img1">
+        <div id="img1Container"></div><br /><br />
+      <label for="project_costcontent">項目整體資金運用描述:</label>
+      <textarea id="project_costcontent" name="project_costcontent"></textarea
+      ><br /><br />
+
+      <label for="deadline">截止日期:</label>
+      <input type="date" id="deadline" name="deadline" /><br /><br />
+
+      <button type="button" id="updateButton">更新</button>
+    </form>
+    <script src="./js/manageproject.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+</html>

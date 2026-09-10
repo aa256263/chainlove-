@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>註冊畫面</title>
+    <link href="./css/register_new.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="register-container">
+        <a href="./start.html" class="back-button">←</a>
+        <h1 class="register-title">註冊帳號</h1>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="username" class="label">使用者名稱</label>
+                <input type="text" id="username" name="username" placeholder="輸入使用者名稱" required>
+            </div>
+            <div class="input-group">
+                <label for="email">電子郵件</label>
+                <input type="email" pattern=".+@gmail.com" placeholder="輸入電子郵件" id="account" name="account" required>
+                <div id="emailError" style="color: red;"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password" placeholder="輸入密碼" required>
+                <input type="password" id="confirm_password" name="confirm-password" placeholder="再次輸入密碼" class="confirm_password" required>
+            </div>
+            <div class="login-link">
+                已擁有帳號？ 
+                <a href="./login.html">點此登入</a>
+            </div>
+            <button type="button" id="registerBtn" class="register-button">註冊</button>
+        </form>
+    </div>
+    <script src="./js/register.js"></script>
+    <script src="./js/headlogo.js"></script>
+</body>
+
+</html>

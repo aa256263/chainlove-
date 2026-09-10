@@ -1,0 +1,94 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+}
+
+
+
+.informationTitle{
+	display: flex;
+	flex-direction: row;
+}
+.informationTitle>a{
+	width: 30px;
+	height: 30px;
+	margin: auto 0;
+	margin-right: 20px;
+}
+.informationTitle>h1{
+	font-size: 40px;
+	color: #1a936f;
+}
+.tabs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.tabs > button {
+	border: 2px solid #1a936f;
+	width: 30%;
+	font-size: 16px;
+	line-height: 30px;
+	border-radius: 10px;
+	font-weight: bolder;
+	color: #1a936f;
+	cursor: pointer;
+	background-color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+}
+.tabs > button[select='1'] {
+	background-color: #1a936f;
+	color: #fff;
+}
+
+.informationLine{
+	padding: 10px;
+	width: calc(70% - 20px);
+	overflow: hidden;
+	/* background-color: #1a936f ; */
+}
+.noContentLine{
+	padding: 10px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.informationLine>h1{
+	font-size: 16px;
+	line-height: 30px;
+	margin: 0;
+	color: black;
+}
+.informationLine>p{
+	margin: 0;
+	margin-top: 10px;
+	font-size: 12px;
+	line-height: 32px;
+	color: #1a936f;
+    text-align: right;
+}
+
+.listTitle>button{
+	font-size: 8px;
+	border: 2px solid #1a936f;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.noContent{
+	font-size: 20px;
+	line-height: auto;
+}
