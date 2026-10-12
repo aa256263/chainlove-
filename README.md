@@ -140,8 +140,6 @@ Node.js + Express
 * Node.js
 * Express.js
 * REST API
-* bcryptjs
-* JSON Web Token
 * Multer
 * Axios
 * WebSocket
@@ -226,65 +224,7 @@ event AutoWithdraw(...)
 
 ---
 
-## 安裝方式
 
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/aa256263/chainlove-.git
-```
-
-進入專案：
-
-```bash
-cd chainlove-
-```
-
-### 2. 安裝套件
-
-```bash
-npm install
-```
-
-### 3. 設定環境變數
-
-在專案根目錄建立：
-
-```text
-.env
-```
-
-環境變數包含資料庫與 AWS 等相關設定，例如：
-
-```env
-PG_USER=
-PG_PASSWORD=
-PG_HOST=
-PG_PORT=
-PG_DATABASE=
-
-AWS_REGION=
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-```
-
-> `.env` 不應上傳至 GitHub。
-
-### 4. 啟動 Server
-
-```bash
-npm start
-```
-
-Server 會由：
-
-```text
-server.js
-```
-
-啟動。
-
----
 
 ## 專案特色
 
@@ -328,6 +268,6 @@ https://github.com/aa256263/chainlove-
 
 ## Author
 
-**Xu Jia Yao / 許家耀**
+**Hsu Jia Yao 
 
 Information Management
